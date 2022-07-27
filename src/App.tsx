@@ -15,9 +15,13 @@ function App() {
           center: 'title',
           end: ''
         }}
+        //headerToolbar={false}
         viewDidMount={(arg) => {
           // You can hook in here and render whatever content you want to the calendar view.
           // For some reason it fires twice???  Fullcalendar is sometimes janky.
+          // Hooking into the toolbar seems like it's not really a thing you're supposed to do.
+          // Might be best to not render the headerToolbar at all and render your own.
+          // Then you have the most control.
           let test = document.getElementById('hiya-test');
           if (!test) {
             const x = document.getElementsByClassName("fc-header-toolbar");
